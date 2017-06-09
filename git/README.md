@@ -3,11 +3,11 @@
 - Force `git pull` to do nothing
 
     ```bash
-	git() {
-	  if [[ "$*" =~ "pull" ]]; then
-		echo "Don't git pull."
-	  else
-		command git $*
-	  fi
-	}
+    git() {
+      if [[ "$*" =~ "pull" ]]; then
+        echo "Don't git pull."
+      else
+        command git $*
+      fi
+    }
     ```
