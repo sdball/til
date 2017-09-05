@@ -15,3 +15,16 @@ Checksums matched!
 Now using node v6.11.1 (npm v3.10.10)
 ```
 
+## JavaScript things everyone seems to override
+
+So Node out of the box isn't _really_ JavaScript, but many projects take it further than that and override fundamental language features as a matter of course.
+
+```
+# lodash adds a bunch of fundamental language features that JavaScript is missing
+# e.g. _.map, _.split, _.trim, _.reduce, _.join, _.take
+var _ = require('lodash');
+
+# Node has Promise, but everyone uses bluebird promises instead
+# even other libraries like sequelize assume bluebird promises
+var Promise = require('bluebird');
+```
